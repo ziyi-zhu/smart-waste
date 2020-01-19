@@ -2,7 +2,7 @@ import optimoroute
 from optimoroute import Order
 import time
 
-
+#function for cleaning and sorting the input data from the Optimoroute api
 def clean_data(data):
     input_data = data
     input_data = input_data.replace("null","'null'")
@@ -19,7 +19,7 @@ def clean_data(data):
     print(result1)
     return result1, result2
 
-
+#function for sending the received full bin location data to the optimoroute api and receiving optimal route data
 
 def get_routes_from_txt(txt_name):
 	my_file = open(txt_name,"r")
