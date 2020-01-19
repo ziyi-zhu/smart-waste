@@ -16,7 +16,7 @@ import serial
 from PIL import Image
 
 def use_model(frame):
-	model = load_model('model1.h5')
+	model = load_model('model5.h5')
 	# frame = plt.imread('waste.jpg')
 	pic = cv2.resize(frame, (30, 60))
 	pic = np.expand_dims(pic, axis=0)
@@ -43,11 +43,17 @@ while True:
 		cap = cv2.VideoCapture(1) # video capture source camera (Here webcam of laptop) 
 		ret,frame = cap.read() # return a single frame in variable `frame`
 
+		# cv2.imwrite('waste.jpg', frame)
+
 		predict = use_model(frame)[0]
 
-		cv2.imwrite('waste.jpg', frame)
+		print(predict)
 
 		if predict == 0:
 			ser.write(b'u')
 		else:
 			ser.write(b'd')
+
+		cv2.imshow('image',frame)
+		cv2.waitKey(0)
+		cv2.destroyAllWindows()

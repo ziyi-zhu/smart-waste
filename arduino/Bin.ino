@@ -3,7 +3,7 @@
 const int trigPin = 9;
 const int echoPin = 10;
 const int ledPin = 13;
-const int buttonPin = A0;
+const int buttonPin = A2;
 
 // defines variables
 long duration;
@@ -13,7 +13,7 @@ Servo myservo;  // create servo object to control a servo
 
 int pos = 90;    // variable to store the servo position
 int isFull = false;
-int thres = 15;
+int thres = 16;
 int timer = 0;
 
 int getDistance() {
@@ -47,9 +47,10 @@ void setup() {
 
 void loop() {
   distance = getDistance();
+  delay(10);
   
   // Find out full or not
-  if(distance < thres && !isFull){
+  if(distance < thres){
     delay(3000);
     
     distance = getDistance();
@@ -78,7 +79,7 @@ void loop() {
     char x = Serial.read();
 
     if(x == 'u') {
-      for (int deg = pos; deg <= 135; deg++) {
+      for (int deg = pos; deg <= 180; deg++) {
         myservo.write(deg);
         pos = deg;
         delay(10);
