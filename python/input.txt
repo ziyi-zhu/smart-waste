@@ -1,0 +1,7 @@
+11,,2020-01-19,,Christ's collge,St Andrews Street,Cambridge,CB2 3BU,UK,,Christ,,2,,1,,2
+21,,2020-01-19,,Homerton college,Hills Road,Cambridge,CB2 8PH,UK,,Homerton,,2,,1,,2
+31,,2020-01-19,,Girton college,Huntingdon Road,Cambridge,CB3 0JG,UK,,Girton,,2,,1,,2
+41,,2020-01-19,,Jesus college, Jesus Lane, Cambridge, CB5 8BL, UK,,Jesus,,2,,1,,2
+51,,2020-01-19,,St John's college,St John's street,CB2 1TP, UK,,John,,2,,1,,2
+61,,2020-01-19,,selwyn College, UK,,selwyn,,2,,1,,2
+71,,2020-01-19,,Downing College,UK,,downing,,2,,1,,2
