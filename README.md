@@ -26,6 +26,12 @@ Spy camera is used for Computer Vision.
 
 ![](image/camera.jpg)
 
+## Sensor
+
+Ultrasonic sensor is used to detect the capacity of bin.
+
+![](image/sensor.jpg)
+
 ## Python
 
 ### Dependencies
