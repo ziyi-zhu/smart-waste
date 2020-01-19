@@ -20,11 +20,29 @@ const int ledPin = 13;
 const int buttonPin = A2;
 ```
 
+## Camera
+
+Spy camera is used for Computer Vision.
+
+![](image/camera.jpg)
+
+## Python
+
+### Dependencies
+
+Install Keras from PyPI:
+
+```sh
+sudo pip install keras
+```
+
+Install TensorFlow and OpenCV from GitHub source.
+
 ## Demo
 
 Connect machine to Arduino and run `python/predict.py`.
 
-### Recycling
+### Recycling with computer vision
 
 Recyclable wastes will be dropped inside the bin.
 
@@ -37,6 +55,18 @@ Non-recyclable wastes will be dropped outside the bin.
 ![](image/banana.gif)
 
 ![](image/orange.gif)
+
+### Bin capacity detection
+
+If the bin is full, green LED will light up.
+
+![](image/full.gif)
+
+### Route planning with OptimoRoute and Google Map Services
+
+Once bin is full, its address will be uploaded and an order for waste pick up will be submitted to the OptimoRoute website. The best route can be obtained from API and plotted using Google Map.
+
+![](image/route.png)
 
 ## Inspiration
 
