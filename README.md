@@ -1,4 +1,43 @@
 # Smart Waste
+Waste collection and management using IoT and Computer Vision.
+
+![](image/bin.jpg)
+
+## Arduino
+
+### Wiring
+
+![](image/circuit.jpg)
+
+### Pinout
+
+The pintout for Arduino can ba changed in `arduino/Bin.ino`:
+
+```c++
+const int trigPin = 9;
+const int echoPin = 10;
+const int ledPin = 13;
+const int buttonPin = A2;
+```
+
+## Demo
+
+Connect machine to Arduino and run `python/predict.py`.
+
+### Recycling
+
+Recyclable wastes will be dropped inside the bin.
+
+![](image/bag.gif)
+
+![](image/can.gif)
+
+Non-recyclable wastes will be dropped outside the bin.
+
+![](image/banana.gif)
+
+![](image/orange.gif)
+
 ## Inspiration
 
 Having gone through projects available for Hack Cambridge 101, we are inspired by the Smart Waste challenge put forwarded by Reply. This is because current wasting collection system is really inefficient and a lot of resources has been wasted during the recycling process. There is an urgent need for improvement
@@ -24,5 +63,5 @@ The biggest challenge we met was due to the poor quality of the camera. We initi
 ## What's next for smart waste
 
 The core of the project is the ML model. We only had time to collect around 100 photos using the spy camera, if we had more time we could have collected more photos so that we have a larger training set. We expect this to improve its classification accuracy. The concept and the technology developed can be implemented on a large scale in urban regions, where we envision IoT enabled bins to be used in parks, public areas and homes. These devices will enable more efficient waste collection methods to be used by the council and are expected to greatly reduce the resources needed to collect public wastes. 
-![](image/bin.jpg)
+
 
