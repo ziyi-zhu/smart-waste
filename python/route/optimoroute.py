@@ -25,6 +25,7 @@ def get_routes(date):
 	}
 
 	response = requests.get("https://api.optimoroute.com/v1/get_routes", params=parameters)
+	return (json.dumps(response.json(), sort_keys=True, indent=4))
 	jprint(response.json())
 
 def create_order(order):
@@ -57,6 +58,8 @@ def get_order(orderNo):
 	}
 
 	response = requests.get("https://api.optimoroute.com/v1/get_orders", params=parameters)
+	text = json.dumps(response.json(), sort_keys=True, indent=4)
+
 	jprint(response.json())
 
 def delete_order(orderNo):
@@ -82,3 +85,7 @@ def start_planning(date):
 
 	response = requests.post("https://api.optimoroute.com/v1/start_planning", params=parameters, data=data)
 	jprint(response.json())
+	
+	
+	
+	
